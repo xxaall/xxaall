@@ -13,16 +13,16 @@ drive.mount('/content/drive')
 import warnings
 warnings.filterwarnings('ignore')
 
-"""transfer learning: ResNet50"""
+"""transfer learning: VGG16"""
 
-from keras.applications.resnet50 import ResNet50
+from keras.applications.VGG16 import VGG16
 from keras.preprocessing import image
-from keras.applications.resnet50 import preprocess_input, decode_predictions
+from keras.applications.VGG16 import preprocess_input, decode_predictions
 import numpy as np
 import tensorflow as ts
 import os
 
-modelvgg = ResNet50(weights='imagenet')
+modelvgg = VGG16(weights='imagenet')
 #img_path = '/content/filker 8k/667626_18933d713e.jpg'
 #img = image.load_img(img_path, target_size=(224, 224))
 #x = image.img_to_array(img)
